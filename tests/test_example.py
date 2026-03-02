@@ -1,4 +1,4 @@
-import re
+import re, pytest
 from playwright.sync_api import *
 
 def test_has_title(page):
