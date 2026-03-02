@@ -15,3 +15,7 @@ def test_get_started_link(page):
 
     # Expects page to have a heading with the name of Installation.
     expect(page.get_by_role("heading", name="Installation")).to_be_visible()
+
+@pytest.mark.skip_browser("firefox")
+def test_visit_example(page):
+    page.goto("https://playwright.dev/")
