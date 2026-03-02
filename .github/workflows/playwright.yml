@@ -29,4 +29,4 @@ jobs:
       if: ${{ !cancelled() }}
       with:
         name: playwright-traces
-        path: reports/
+        path: test-results/

@@ -18,7 +18,7 @@ This project provides an automated testing framework for web applications using 
 │   └── test_example.py         # Example test cases
 ├── pages/                      # Page Object Model classes (future)
 ├── utils/                      # Utility functions and helpers
-└── reports/
+└── test-results/
     └── report.html             # HTML test reports
 ```
 
@@ -55,7 +55,7 @@ See [requirements.txt](requirements.txt) for the complete list of dependencies.
 ### Local Environment
 Run tests with headed browser, visual debugging, and video/screenshot capture on failure:
 ```bash
-pytest -c pytest.local.ini
+pytest -c pytest.ini
 ```
 
 **Features:**
@@ -68,7 +68,7 @@ pytest -c pytest.local.ini
 ### CI/CD Environment
 Run tests in headless mode with parallel execution:
 ```bash
-pytest -c pytest.ci.ini
+pytest -c pytest.ini
 ```
 
 **Features:**
