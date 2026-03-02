@@ -1,5 +1,5 @@
 import re
-from playwright.sync_api import expect
+from playwright.sync_api import *
 
 def test_has_title(page):
     page.goto("https://playwright.dev/")
