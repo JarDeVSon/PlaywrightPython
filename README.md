@@ -18,8 +18,8 @@ This project provides an automated testing framework for web applications using 
 │   └── test_example.py         # Example test cases
 ├── pages/                      # Page Object Model classes (future)
 ├── utils/                      # Utility functions and helpers
-└── test-results/
-    └── report.html             # HTML test reports
+└── report/
+    └── report.html             # HTML test report
 ```
 
 ## Requirements
@@ -55,7 +55,7 @@ See [requirements.txt](requirements.txt) for the complete list of dependencies.
 ### Local Environment
 Run tests with headed browser, visual debugging, and video/screenshot capture on failure:
 ```bash
-pytest -c pytest.ini
+pytest
 ```
 
 **Features:**
@@ -68,7 +68,7 @@ pytest -c pytest.ini
 ### CI/CD Environment
 Run tests in headless mode with parallel execution:
 ```bash
-pytest -c pytest.ini
+pytest tests --base-url=https://playwright.dev --tracing=retain-on-failure
 ```
 
 **Features:**
@@ -80,7 +80,7 @@ pytest -c pytest.ini
 
 ## Test Configuration
 
-Both configurations generate HTML reports in the `reports/` directory with detailed test results and artifacts.
+Both configurations generate HTML reports in the `report/` directory with detailed test results and artifacts.
 
 ## Key Dependencies
 
