@@ -11,8 +11,7 @@ This project provides an automated testing framework for web applications using 
 ```
 .
 ├── conftest.py                 # Pytest fixtures for browser and page setup
-├── pytest.local.ini            # Local test configuration
-├── pytest.ci.ini               # CI/CD test configuration
+├── pytest.ini                  # Test configuration
 ├── requirements.txt            # Python dependencies
 ├── tests/
 │   └── test_example.py         # Example test cases
