@@ -31,7 +31,7 @@ jobs:
       if: ${{ !cancelled() }}
       with:
         name: playwright-traces
-        path: test-results/
+        path: report/
 
   generate_report:
       if: always()
@@ -43,10 +43,10 @@ jobs:
         - name: Download reports
           uses: actions/download-artifact@v4
           with:
-            name: test-results
+            name: report
 
         - name: Implantar Resultados no Github Pages
           uses: peaceiris/actions-gh-pages@v4
           with:
             github_token: ${{ secrets.GITHUB_TOKEN }}
-            publish_dir: "**/test-results/"        
+            publish_dir: "**/report/"        
