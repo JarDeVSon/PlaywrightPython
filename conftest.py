@@ -22,7 +22,6 @@ def page(browser):
 @pytest.hookimpl(optionalhook=True)
 def pytest_metadata(metadata):
     metadata.clear()
-
     metadata["Base URL"] = config.getoption("--base-url") if hasattr(config.option, "base_url") else "N/A"
     
 def pytest_html_report_title(report):
