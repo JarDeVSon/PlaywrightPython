@@ -26,7 +26,7 @@ def pytest_metadata(metadata):
     metadata["Base URL"] = config.getoption("--base-url") if hasattr(config.option, "base_url") else "N/A"
     
 def pytest_html_report_title(report):
-    report.title = "Relatório de Testes - Automação Playwright Python"
+    report.title = "Automation Report - Playwright Python"
 
 @pytest.hookimpl(optionalhook=True)
 def pytest_metadata(metadata):
@@ -49,7 +49,7 @@ def pytest_runtest_makereport(item, call):
         screenshot_base64 = base64.b64encode(screenshot_bytes).decode("utf-8")
 
         status_color = "#28a745" if report.passed else "#dc3545"
-        status_text = "SUCESSO" if report.passed else "FALHA"
+        status_text = "SUCCESS" if report.passed else "FAILURE"
 
         html = f"""
         <div style="border:2px solid {status_color}; padding:10px; margin-top:10px;">
