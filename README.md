@@ -15,8 +15,6 @@ This project is a complete end-to-end test automation framework using Playwright
 ├── requirements.txt                     # Python dependencies
 ├── README.md                            # This file
 ├── pages/
-│   ├── __pycache__/
-│   ├── .gitkeep
 │   └── marketing_cloud_platform_page.py # Page Object Model for Marketing Cloud Platform
 ├── tests/
 │   ├── __pycache__/
@@ -259,6 +257,12 @@ pytest -s
 
 # Run single test with detailed output
 pytest tests/test_marketing_cloud_platform.py::TestProductVisibility::test_questbrand_product_visible -vv -s
+
+# Run in debbug mode (see browser):
+PWDEBUG=1 pytest -s
+
+# Run in Browser Developer Tools debbug mode (see browser):
+PWDEBUG=console pytest -s
 ```
 
 ## 🔐 Fixtures
