@@ -3,7 +3,7 @@ import pytest
 import base64
 from playwright.sync_api import sync_playwright
 from pages.marketing_cloud_platform_page import MarketingCloudPlatformPage
-
+from pytest_metadata.plugin import metadata
 
 @pytest.fixture(scope="session")
 def browser():
@@ -27,6 +27,19 @@ def platform_page(page):
     """Fixture to provide MarketingCloudPlatformPage instance."""
     return MarketingCloudPlatformPage(page)
 
+@pytest.hookimpl(optionalhook=True)
+def pytest_metadata(metadata):
+    metadata.clear()
+    metadata["Base URL"] = config.getoption("--base-url") if hasattr(config.option, "base_url") else "N/A"
+    
+def pytest_html_report_title(report):
+    report.title = "Automation Report - Playwright Python"
+
+@pytest.hookimpl(optionalhook=True)
+def pytest_metadata(metadata):
+    metadata.pop("JAVA_HOME", None)
+    metadata.pop("Plugins", None)
+    metadata.pop("Packages", None)
 
 @pytest.hookimpl(hookwrapper=True)
 def pytest_runtest_makereport(item, call):
