@@ -2,36 +2,31 @@ import pytest_html
 import pytest
 import base64
 from playwright.sync_api import sync_playwright
-from pytest_metadata.plugin import metadata
-
+from pages.marketing_cloud_platform_page import MarketingCloudPlatformPage
 
 
 @pytest.fixture(scope="session")
 def browser():
+    """Provide a browser instance for the test session."""
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
         yield browser
         browser.close()
 
+
 @pytest.fixture
 def page(browser):
+    """Provide a new page for each test."""
     page = browser.new_page()
     yield page
     page.close()
 
-@pytest.hookimpl(optionalhook=True)
-def pytest_metadata(metadata):
-    metadata.clear()
-    metadata["Base URL"] = config.getoption("--base-url") if hasattr(config.option, "base_url") else "N/A"
-    
-def pytest_html_report_title(report):
-    report.title = "Automation Report - Playwright Python"
 
-@pytest.hookimpl(optionalhook=True)
-def pytest_metadata(metadata):
-    metadata.pop("JAVA_HOME", None)
-    metadata.pop("Plugins", None)
-    metadata.pop("Packages", None)
+@pytest.fixture
+def platform_page(page):
+    """Fixture to provide MarketingCloudPlatformPage instance."""
+    return MarketingCloudPlatformPage(page)
+
 
 @pytest.hookimpl(hookwrapper=True)
 def pytest_runtest_makereport(item, call):
