@@ -18,7 +18,7 @@ This project is a complete end-to-end test automation framework using Playwright
 │   └── marketing_cloud_platform_page.py # Page Object Model for Marketing Cloud Platform
 ├── tests/
 │   ├── __pycache__/
-│   └── test_marketing_cloud_platform.py # 35 comprehensive test cases
+│   └── test_marketing_cloud_platform.py # 32 comprehensive test cases
 ├── utils/                               # Utility functions (future expansion)
 ├── report/
 │   └── index.html                       # Generated HTML test report
@@ -40,7 +40,7 @@ This project is a complete end-to-end test automation framework using Playwright
 
 ## 📊 Test Coverage
 
-**Total Tests: 35 (All Passing ✅)**
+**Total Tests: 32 (All Passing ✅)**
 
 ### Test Suites:
 1. **Navigation & Loading** (4 tests)
@@ -52,7 +52,7 @@ This project is a complete end-to-end test automation framework using Playwright
    - QuestBrand, QuestDIY, BERA.ai, QuestIC
    - Influence, SmartAssets, CUE, TPP Insights
 
-3. **Learn More Links** (6 tests)
+3. **Learn More Links** (7 tests)
    - Product marketplace link verification
    - Navigation to product detail pages
 
@@ -60,15 +60,17 @@ This project is a complete end-to-end test automation framework using Playwright
    - Section headers (Market Research, Communications, Creative & Media)
    - Product Marketplace and Platform headings
 
-5. **Navigation Controls** (4 tests)
-   - Category filter visibility
-
-6. **User Actions** (4 tests)
+5. **Sign Up Navigation** (2 tests)
    - Sign up button functionality
-   - Demo request link behavior
+   - Sign up link destination verification
 
-7. **Legacy Tests** (test_example.py - 3 tests)
-   - Basic Playwright examples
+6. **Demo Request** (2 tests)
+   - Demo request link clickability
+   - Demo form navigation
+
+7. **Category Filters** (4 tests)
+   - Category filter text visibility
+   - All Products, Market Research, Communications, Creative & Media
 
 ## 🛠️ Tech Stack
 
