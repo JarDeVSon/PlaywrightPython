@@ -3,5 +3,5 @@
 __pycache__
 report/
 .vscode
-.couverage
 *.xml
+.coverage
