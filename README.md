@@ -18,8 +18,9 @@ This project is a complete end-to-end test automation framework using Playwright
 │   └── marketing_cloud_platform_page.py # Page Object Model for Marketing Cloud Platform
 ├── tests/
 │   ├── __pycache__/
-│   └── test_marketing_cloud_platform.py # 32 comprehensive test cases
-├── utils/                               # Utility functions (future expansion)
+│   └── test_marketing_cloud_platform.py # 26 comprehensive test cases
+├── utils/
+|   |___ highlight.py                    # Utility functions (apply highlight expect validations)
 ├── report/
 │   └── index.html                       # Generated HTML test report
 ├── .github/workflows/
@@ -40,7 +41,7 @@ This project is a complete end-to-end test automation framework using Playwright
 
 ## 📊 Test Coverage
 
-**Total Tests: 32 (All Passing ✅)**
+**Total Tests: 26 (All Passing ✅)**
 
 ### Test Suites:
 1. **Navigation & Loading** (4 tests)
@@ -56,7 +57,7 @@ This project is a complete end-to-end test automation framework using Playwright
    - Product marketplace link verification
    - Navigation to product detail pages
 
-4. **Content & Structure** (5 tests)
+4. **Content & Structure** (2 tests)
    - Section headers (Market Research, Communications, Creative & Media)
    - Product Marketplace and Platform headings
 
@@ -68,7 +69,7 @@ This project is a complete end-to-end test automation framework using Playwright
    - Demo request link clickability
    - Demo form navigation
 
-7. **Category Filters** (4 tests)
+7. **Category Filters** (1 tests)
    - Category filter text visibility
    - All Products, Market Research, Communications, Creative & Media
 
@@ -308,6 +309,6 @@ This project is provided as-is for testing automation purposes.
 ---
 
 **Last Updated**: March 5, 2026  
-**Test Status**: ✅ 35/35 Passing  
+**Test Status**: ✅ 26/26 Passing  
 **Python Version**: 3.14.3  
 **Playwright Version**: 1.58.0+
