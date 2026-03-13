@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="105.363" timestamp="2026-03-13T18:44:46.165302" hostname="runnervm46oaq"><testcase classname="tests.test_feature_login.TestLogin" name="test_login_page_object" time="103.773"><failure message="playwright._impl._errors.TimeoutError: Locator.click: Timeout 30000ms exceeded.&#10;Call log:&#10;  - waiting for get_by_role(&quot;textbox&quot;, name=&quot;Username&quot;)">self = &lt;test_feature_login.TestLogin object at 0x7f8a854665d0&gt;
-login_page = &lt;pages.feature_login_page.LoginPage object at 0x7f8a84dfc2d0&gt;
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="105.638" timestamp="2026-03-13T18:47:41.667155" hostname="runnervm0kj6c"><testcase classname="tests.test_feature_login.TestLogin" name="test_login_page_object" time="104.029"><failure message="playwright._impl._errors.TimeoutError: Locator.click: Timeout 30000ms exceeded.&#10;Call log:&#10;  - waiting for get_by_role(&quot;textbox&quot;, name=&quot;Username&quot;)">self = &lt;test_feature_login.TestLogin object at 0x7fe97dc8a5d0&gt;
+login_page = &lt;pages.feature_login_page.LoginPage object at 0x7fe97d9202d0&gt;
 
     def test_login_page_object(self, login_page):
 &gt;       login_page.login("tomsmith", "SuperSecretPassword!")
@@ -18,8 +18,8 @@ pages/feature_login_page.py:17: in login
     return await self._connection.wrap_api_call(
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = &lt;playwright._impl._connection.Connection object at 0x7f8a85496270&gt;
-cb = &lt;function Channel.send.&lt;locals&gt;.&lt;lambda&gt; at 0x7f8a8522e8d0&gt;
+self = &lt;playwright._impl._connection.Connection object at 0x7fe97dcba270&gt;
+cb = &lt;function Channel.send.&lt;locals&gt;.&lt;lambda&gt; at 0x7fe97da528d0&gt;
 is_internal = False, title = None
 
     async def wrap_api_call(
