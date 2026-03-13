@@ -47,7 +47,7 @@ This project is a complete end-to-end test automation framework using Playwright
 ### Test Suites[DEMO]:
 
 1. **"""Test suite for the Login Page of The Internet."""** (1 tests)
-   - Login into Secure Area with valid credentials.
+   - Login into Secure Area with valid credentials
 
 
 ## 🛠️ Tech Stack
