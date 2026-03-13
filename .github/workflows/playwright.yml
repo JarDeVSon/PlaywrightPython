@@ -27,7 +27,7 @@ jobs:
       run: python -m playwright install --with-deps
 
     - name: Run your tests
-      run: pytest
+      run: pytest --base-url=https://the-internet.herokuapp.com
 
     - name: SonarQube Scan
       uses: SonarSource/sonarqube-scan-action@v2
