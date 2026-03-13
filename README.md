@@ -41,7 +41,7 @@ This project is a complete end-to-end test automation framework using Playwright
 
 ## 📊 Test Coverage
 
-**Total Tests: 26 (All Passing ✅)**
+**Total Tests: 1 (All Passing ✅)**
 
 ### Test Suites[DEMO]:
 
