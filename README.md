@@ -38,6 +38,7 @@ This project is a complete end-to-end test automation framework using Playwright
 - **Visual Debugging**: Slow motion (200ms), video on failure, and trace recording
 - **CI/CD Ready**: GitHub Actions workflow configured and ready to deploy
 - **Auto-Retrying**: Built-in Playwright waits with no manual timeouts
+- **Avoid-Flakiness**: pytest-rerunfailures to automatically retry failed tests
 
 ## 📊 Test Coverage
 
@@ -58,6 +59,9 @@ This project is a complete end-to-end test automation framework using Playwright
 - **pytest-xdist**: 3.8.0 - Parallel execution
 - **pytest-html**: 4.1.1 - HTML reporting
 - **pytest-base-url**: 2.1.0 - Base URL configuration
+- **pytest-cov**: 7.0.0 - Code Coverage Pytest
+- **coverage**: 7.13.4 - Coverage reporting
+- **pytest-rerunfailures**: 16.1 - Avoid Flakiness
 
 See [requirements.txt](requirements.txt) for the complete dependency list.
 
