@@ -2,7 +2,7 @@ import pytest_html
 import pytest
 import base64
 from playwright.sync_api import sync_playwright
-from pages.marketing_cloud_platform_page import MarketingCloudPlatformPage
+from pages.feature_login_page import LoginPage
 from pytest_metadata.plugin import metadata
 
 @pytest.fixture(scope="session")
@@ -22,10 +22,13 @@ def page(browser):
     page.close()
 
 
+
 @pytest.fixture
-def platform_page(page):
-    """Fixture to provide MarketingCloudPlatformPage instance."""
-    return MarketingCloudPlatformPage(page)
+def login_page(page, base_url):
+    """Fixture to provide LoginPage instance."""
+    page.goto(base_url + "/login")
+    return LoginPage(page)
+
 
 @pytest.hookimpl(optionalhook=True)
 def pytest_metadata(metadata):

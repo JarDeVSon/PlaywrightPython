@@ -1,10 +1,10 @@
 # Playwright Python Test Automation - Marketing Cloud Platform
 
-A comprehensive Playwright test automation suite for The Marketing Cloud Platform using Python and Pytest.
+A comprehensive Playwright test automation suite for """Test suite for the Login Page of The Internet.""" using Python and Pytest.
 
 ## 📋 Project Overview
 
-This project is a complete end-to-end test automation framework using Playwright's sync API with Python. It tests https://www.themarketingcloud.com/platform#products and includes modern testing practices such as Page Object Model, parallel execution, multi-browser testing, and detailed HTML reporting with screenshots and videos.
+This project is a complete end-to-end test automation framework using Playwright's sync API with Python. It tests """Test suite for the Login Page of The Internet.""" and includes modern testing practices such as Page Object Model, parallel execution, multi-browser testing, and detailed HTML reporting with screenshots and videos.
 
 ## 📁 Project Structure
 
@@ -15,10 +15,10 @@ This project is a complete end-to-end test automation framework using Playwright
 ├── requirements.txt                     # Python dependencies
 ├── README.md                            # This file
 ├── pages/
-│   └── marketing_cloud_platform_page.py # Page Object Model for Marketing Cloud Platform
+│   └── feature_login_page.py            # Page Object Model for Login 
 ├── tests/
 │   ├── __pycache__/
-│   └── test_marketing_cloud_platform.py # 26 comprehensive test cases
+│   └── test_feature_login.py            # """Test suite for the Login Page of The Internet."""
 ├── utils/
 |   |___ highlight.py                    # Utility functions (apply highlight expect validations)
 ├── report/
@@ -43,35 +43,11 @@ This project is a complete end-to-end test automation framework using Playwright
 
 **Total Tests: 26 (All Passing ✅)**
 
-### Test Suites:
-1. **Navigation & Loading** (4 tests)
-   - Page navigation verification
-   - Category filters visibility
-   - Sign up and demo links
+### Test Suites[DEMO]:
 
-2. **Product Visibility** (8 tests)
-   - QuestBrand, QuestDIY, BERA.ai, QuestIC
-   - Influence, SmartAssets, CUE, TPP Insights
+1. **"""Test suite for the Login Page of The Internet."""** (1 tests)
+   - Login into Secure area
 
-3. **Learn More Links** (7 tests)
-   - Product marketplace link verification
-   - Navigation to product detail pages
-
-4. **Content & Structure** (2 tests)
-   - Section headers (Market Research, Communications, Creative & Media)
-   - Product Marketplace and Platform headings
-
-5. **Sign Up Navigation** (2 tests)
-   - Sign up button functionality
-   - Sign up link destination verification
-
-6. **Demo Request** (2 tests)
-   - Demo request link clickability
-   - Demo form navigation
-
-7. **Category Filters** (1 tests)
-   - Category filter text visibility
-   - All Products, Market Research, Communications, Creative & Media
 
 ## 🛠️ Tech Stack
 
@@ -119,7 +95,7 @@ pytest
 
 Run tests for a specific module:
 ```bash
-pytest tests/test_marketing_cloud_platform.py -v
+pytest tests/test_feature_login.py -v
 ```
 
 Run tests with specific browser:
@@ -131,7 +107,7 @@ pytest --browser webkit
 
 Run a single test:
 ```bash
-pytest tests/test_marketing_cloud_platform.py::TestProductVisibility::test_questbrand_product_visible -v
+pytest tests/test_feature_login.py::test_login_page_object -v
 ```
 
 Run in headed mode (see browser):
@@ -160,8 +136,8 @@ The `pytest.ini` file configures:
 
 ## 📖 Page Object Model
 
-### MarketingCloudPlatformPage
-Location: `pages/marketing_cloud_platform_page.py`
+### LoginPage
+Location: `pages/feature_login_page.py`
 
 **Key Features:**
 - Encapsulates all element locators
@@ -169,11 +145,7 @@ Location: `pages/marketing_cloud_platform_page.py`
 - Separates test logic from locator management
 
 **Main Methods:**
-- `navigate()` - Navigate to the platform page
-- `filter_by_category(category)` - Filter products by category
-- `verify_product_visible(product_name)` - Check product visibility
-- `submit_demo_request(...)` - Fill and submit demo form
-- Various property accessors for elements
+- `login()` - Perform login action with given credentials. 
 
 ## 📈 Execution Details
 
@@ -243,11 +215,11 @@ chmod +x .venv/bin/activate
 
 ### Running Specific Test Classes
 ```bash
-# Run all product visibility tests
-pytest tests/test_marketing_cloud_platform.py::TestProductVisibility -v
+# Run all tests
+pytest pytest tests/test_feature_login.py -v
 
-# Run all navigation tests
-pytest tests/test_marketing_cloud_platform.py::TestMarketingCloudPlatformNavigation -v
+# Run specific tests
+pytest pytest tests/test_feature_login.py::test_login_page_object -v
 ```
 
 ### Debugging Tests
@@ -259,7 +231,7 @@ pytest -vv
 pytest -s
 
 # Run single test with detailed output
-pytest tests/test_marketing_cloud_platform.py::TestProductVisibility::test_questbrand_product_visible -vv -s
+pytest pytest tests/test_feature_login.py::test_login_page_object -vv -s
 
 # Run in debbug mode (see browser):
 PWDEBUG=1 pytest -s
@@ -308,7 +280,7 @@ This project is provided as-is for testing automation purposes.
 
 ---
 
-**Last Updated**: March 5, 2026  
-**Test Status**: ✅ 26/26 Passing  
+**Last Updated**: March 13, 2026  
+**Test Status**: ✅ 1/1 Passing  
 **Python Version**: 3.14.3  
 **Playwright Version**: 1.58.0+
