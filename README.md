@@ -1,4 +1,4 @@
-# Playwright Python Test Automation - Marketing Cloud Platform
+# Playwright Python Test Automation - The Heroku App The Internet. Login Demo
 
 A comprehensive Playwright test automation suite for """Test suite for the Login Page of The Internet.""" using Python and Pytest.
 
@@ -20,7 +20,7 @@ This project is a complete end-to-end test automation framework using Playwright
 │   ├── __pycache__/
 │   └── test_feature_login.py            # """Test suite for the Login Page of The Internet."""
 ├── utils/
-|   |___ highlight.py                    # Utility functions (apply highlight expect validations)
+|   |___ highlight.py                    # Utility functions (All Expected Validations In Highlight)
 ├── report/
 │   └── index.html                       # Generated HTML test report
 ├── .github/workflows/
@@ -46,7 +46,7 @@ This project is a complete end-to-end test automation framework using Playwright
 ### Test Suites[DEMO]:
 
 1. **"""Test suite for the Login Page of The Internet."""** (1 tests)
-   - Login into Secure area
+   - Login into Secure Area with valid credentials.
 
 
 ## 🛠️ Tech Stack
