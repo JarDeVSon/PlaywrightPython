@@ -8,7 +8,7 @@ playwright==1.58.0
 pluggy==1.6.0
 pyee==13.0.1
 Pygments==2.19.2
-pytest==8.2.2
+pytest==8.0.0
 pytest-html==4.1.1
 pytest-base-url==2.1.0
 pytest-playwright==0.7.2
@@ -20,3 +20,4 @@ urllib3==2.6.3
 pytest-xdist==3.8.0
 pytest-cov==7.0.0
 coverage==7.13.4
+pytest-rerunfailures==16.1
