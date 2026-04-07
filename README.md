@@ -6,6 +6,9 @@ A comprehensive Playwright test automation suite for """Test suite for the Login
 
 This project is a complete end-to-end test automation framework using Playwright's sync API with Python. It tests """Test suite for the Login Page of The Internet.""" and includes modern testing practices such as Page Object Model, parallel execution, multi-browser testing, and detailed HTML reporting with screenshots and videos.
 
+The approach used was the AI-Assisted Development, This framework was engineered using an AI-assisted workflow which I leveraged to accelerate development while maintaining full ownership of architecture, implementation, and validation.
+AI was used to speed up development, but all design decisions, debugging, and test validation were driven and verified by me through real execution — ensuring a stable, production-style automation framework.
+
 ## 📁 Project Structure
 
 ```
